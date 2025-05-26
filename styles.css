@@ -23,7 +23,6 @@ nav {
     display: flex;
     align-items: center;
     gap: 2rem;
-    flex-wrap: nowrap;
 }
 
 .nav-links ul {
@@ -32,13 +31,10 @@ nav {
     align-items: center;
     margin: 0;
     padding: 0;
-    flex-wrap: nowrap;
 }
 
 .nav-links li {
     position: relative;
-    display: flex;
-    align-items: center;
 }
 
 .nav-links a {
@@ -48,8 +44,6 @@ nav {
     padding: 0.5rem 1rem;
     transition: color 0.3s ease;
     white-space: nowrap;
-    display: flex;
-    align-items: center;
 }
 
 .nav-links a:hover {
@@ -58,9 +52,7 @@ nav {
 
 /* Contenedor del botón de soporte */
 .support-button-container {
-    display: flex;
-    align-items: center;
-    margin-left: 2rem;
+    margin-left: auto;
 }
 
 /* Botón de soporte */
@@ -75,7 +67,6 @@ nav {
     align-items: center;
     gap: 0.5rem;
     transition: background-color 0.3s ease;
-    white-space: nowrap;
 }
 
 .support-button:hover {
