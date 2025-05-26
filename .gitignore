@@ -1,0 +1,28 @@
+# Dependencias
+node_modules/
+vendor/
+
+# Archivos temporales
+*.log
+*.tmp
+
+# Archivos de desarrollo
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Archivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de compilación
+*.min.js
+*.min.css

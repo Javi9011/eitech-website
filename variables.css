@@ -1,0 +1,24 @@
+:root {
+    /* Colores principales */
+    --primary-color: #25D366;
+    --secondary-color: #007bff;
+    --text-color: #333;
+    --light-gray: #f8f9fa;
+    --white: #ffffff;
+
+    /* Espaciado */
+    --spacing-sm: 10px;
+    --spacing-md: 20px;
+    --spacing-lg: 40px;
+
+    /* Tamaños de fuente */
+    --font-size-sm: 14px;
+    --font-size-md: 16px;
+    --font-size-lg: 18px;
+    --font-size-xl: 24px;
+
+    /* Sombras */
+    --shadow-sm: 0 2px 5px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 10px rgba(0,0,0,0.1);
+    --shadow-lg: 0 8px 20px rgba(0,0,0,0.15);
+}

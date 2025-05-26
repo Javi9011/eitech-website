@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eitech - Servicios de Impresión y Tecnología</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="chatbot-styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html#inicio">
+                    <img src="assets/images/EitechLogo.png" alt="Eitech" style="max-height: 40px;">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="acerca-de.html">Acerca de</a></li>
+                <li>
+                    <button class="support-button">
+                        <i class="fas fa-headset"></i> Soporte
+                    </button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Soluciones de Impresión Inteligentes</h1>
+            <p>Servicios de outsourcing, arriendo y mantenimiento de equipos de impresión</p>
+            <a href="#contacto" class="cta-button">¡Contáctanos!</a>
+        </div>
+    </section>
+
+    <section id="servicios" class="services">
+        <h2>Nuestros Servicios</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <a href="outsourcing.html">
+                    <i class="fas fa-print"></i>
+                    <h3>Outsourcing de Impresión</h3>
+                    <p>Soluciones integrales para la gestión de su infraestructura de impresión.</p>
+                </a>
+            </div>
+            <div class="service-card">
+                <a href="arriendo.html">
+                    <i class="fas fa-building"></i>
+                    <h3>Arriendo de Equipos</h3>
+                    <p>Computadores de última tecnología para su empresa.</p>
+                </a>
+            </div>
+            <div class="service-card">
+                <a href="servicio-tecnico.html">
+                    <i class="fas fa-tools"></i>
+                    <h3>Servicio Técnico</h3>
+                    <p>Mantenimiento preventivo y correctivo de impresoras.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="contact">
+        <h2>Contacto</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Carrera 116 # 152-80<br>Bogotá, Colombia</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <p>Teléfono: 3204797737</p>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p>info@eitech.com.co</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Eitech. Todos los derechos reservados.</p>
+    </footer>
+
+    <link rel="stylesheet" href="chatbot-simple.css">
+    <div id="chat-widget" class="chat-widget">
+        <div class="chat-header">
+            <h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/200px-WhatsApp.svg.png" alt="WhatsApp" style="width: 24px; height: 24px;">
+                Chat Eitech
+            </h3>
+            <button onclick="closeChat()">×</button>
+        </div>
+        <div class="chat-messages">
+            <div class="message bot">
+                ¡Hola! ¿Cómo podemos ayudarte hoy?
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-message" placeholder="Escribe tu mensaje...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+    <div class="chat-trigger" onclick="toggleChat()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/200px-WhatsApp.svg.png" alt="WhatsApp">
+    </div>
+    <script>
+        let chatOpen = false;
+
+        function toggleChat() {
+            const chat = document.getElementById('chat-widget');
+            chat.style.display = chat.style.display === 'none' ? 'flex' : 'none';
+            chatOpen = !chatOpen;
+        }
+
+        function closeChat() {
+            document.getElementById('chat-widget').style.display = 'none';
+            chatOpen = false;
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('user-message');
+            const message = input.value.trim();
+
+            if (message) {
+                const messages = document.querySelector('.chat-messages');
+                const messageDiv = document.createElement('div');
+                messageDiv.className = 'message user';
+                messageDiv.textContent = message;
+                messages.appendChild(messageDiv);
+                input.value = '';
+                
+                // Redirigir a WhatsApp
+                window.open(`https://wa.me/573204797737?text=${encodeURIComponent(message)}`, '_blank');
+            }
+        }
+
+        // Abrir chat cuando se carga la página
+        window.addEventListener('load', () => {
+            toggleChat();
+        });
+
+        // Manejar envío de mensaje al presionar Enter
+        document.getElementById('user-message').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
+    <div class="chat-trigger" onclick="toggleChat()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/200px-WhatsApp.svg.png" alt="WhatsApp" style="width: 32px; height: 32px;">
+    </div>
+
+    <div id="chat-widget" class="chat-widget">
+        <div class="chat-header">
+            <h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/200px-WhatsApp.svg.png" alt="WhatsApp" style="width: 24px; height: 24px;">
+                Chat Eitech
+            </h3>
+            <button onclick="closeChat()">×</button>
+        </div>
+        <div id="chat-messages" class="chat-messages"></div>
+        <div class="chat-input">
+            <input type="text" id="user-message" placeholder="Escribe tu mensaje...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+    <script src="chatbot.js"></script>
+</body>
+</html>

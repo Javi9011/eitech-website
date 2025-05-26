@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Eitech</title>
+    <link rel="stylesheet" href="chatbot-styles.css">
+</head>
+<body>
+    <div class="chat-trigger" onclick="toggleChat()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/200px-WhatsApp.svg.png" alt="WhatsApp" style="width: 32px; height: 32px;">
+    </div>
+
+    <div id="chat-widget" class="chat-widget">
+        <div class="chat-header">
+            <h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/200px-WhatsApp.svg.png" alt="WhatsApp" style="width: 24px; height: 24px;">
+                Chat Eitech
+            </h3>
+            <button onclick="closeChat()">×</button>
+        </div>
+        <div id="chat-messages" class="chat-messages"></div>
+        <div class="chat-input">
+            <input type="text" id="user-message" placeholder="Escribe tu mensaje...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+
+    <script>
+        let chatOpen = false;
+
+        function toggleChat() {
+            const chat = document.getElementById('chat-widget');
+            chat.style.display = chat.style.display === 'none' ? 'flex' : 'none';
+            chatOpen = !chatOpen;
+        }
+
+        function closeChat() {
+            document.getElementById('chat-widget').style.display = 'none';
+            chatOpen = false;
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('user-message');
+            const message = input.value.trim();
+
+            if (message) {
+                addMessage(message, 'user');
+                input.value = '';
+                processMessage(message);
+            }
+        }
+
+        function addMessage(text, sender) {
+            const messages = document.getElementById('chat-messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}`;
+            messageDiv.textContent = text;
+            messages.appendChild(messageDiv);
+            messages.scrollTop = messages.scrollHeight;
+        }
+
+        function processMessage(message) {
+            // Aquí podríamos agregar lógica de procesamiento del mensaje
+            // Por ahora, simplemente redirigimos a WhatsApp
+            setTimeout(() => {
+                const response = "¡Hola! Tu mensaje ha sido recibido. ¿Cómo podemos ayudarte hoy?";
+                addMessage(response, 'bot');
+                
+                // Redirigir a WhatsApp después de un breve retraso
+                setTimeout(() => {
+                    window.open(`https://wa.me/573204797737?text=${encodeURIComponent(message)}`, '_blank');
+                }, 1000);
+            }, 1000);
+        }
+
+        // Abrir chat con un mensaje de bienvenida cuando se carga la página
+        window.addEventListener('load', () => {
+            const welcomeMessage = "¡Bienvenido al chat de Eitech! ¿Cómo podemos ayudarte hoy?";
+            addMessage(welcomeMessage, 'bot');
+        });
+
+        // Manejar envío de mensaje al presionar Enter
+        document.getElementById('user-message').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+    </script>
+</body>
+</html>

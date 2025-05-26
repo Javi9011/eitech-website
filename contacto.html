@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Eitech</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="contact-styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html#inicio">
+                    <img src="assets/images/EitechLogo.png" alt="Eitech" style="max-height: 40px;">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="#" class="active">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-container">
+            <h2>Contáctanos</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p><strong>Dirección:</strong> Carrera 116 # 152-80, Bogotá D.C.</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p><strong>Teléfono:</strong> +57 320 479 7737</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p><strong>Correo:</strong> info@eitech.com.co</p>
+                </div>
+            </div>
+            <div class="map-section">
+                <h3>Ubícanos en el mapa</h3>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.785718042819!2d-74.0911914249849!3d4.664890196504174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9c53d127c555%3A0x8f7e32f3a8b6319e!2sCra.%20116%20%23152-80%2C%20Bogot%C3%A1!5e0!3m2!1ses-419!2sco!4v1685093450948!5m2!1ses-419!2sco"
+                        width="100%"
+                        height="400"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h3>Envíanos un mensaje</h3>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nombre:</label>
+                        <input type="text" id="name" name="name" placeholder="Tu nombre completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico:</label>
+                        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje:</label>
+                        <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+                    <div id="form-message" class="form-message"></div>
+                    <button type="submit" class="cta-button">Enviar Mensaje</button>
+                </form>
+                <script>
+                    document.getElementById('contact-form').addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        
+                        const formData = new FormData(this);
+                        const messageDiv = document.getElementById('form-message');
+                        
+                        // Mostrar mensaje de carga
+                        messageDiv.innerHTML = '<p class="loading">Enviando mensaje...</p>';
+                        
+                        fetch('send-email.php', {
+                            method: 'POST',
+                            body: formData
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                messageDiv.innerHTML = '<p class="success">¡Mensaje enviado exitosamente!</p>';
+                                this.reset();
+                            } else {
+                                messageDiv.innerHTML = '<p class="error">Error: ' + data.message + '</p>';
+                            }
+                        })
+                        .catch(error => {
+                            messageDiv.innerHTML = '<p class="error">Error: No se pudo enviar el mensaje. Por favor, inténtelo más tarde.</p>';
+                        });
+                    });
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Eitech. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

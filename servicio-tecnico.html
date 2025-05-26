@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="back-button.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicio Técnico - Eitech</title>
+    <link rel="stylesheet" href="service-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        window.addEventListener('load', function() {
+            const serviceContent = document.querySelector('.service-content');
+            serviceContent.classList.add('visible');
+        });
+    </script>
+    <link rel="stylesheet" href="chatbot-styles.css">
+    </head>
+<body>
+    <a href="index.html" class="back-button">
+        <i class="fas fa-arrow-left"></i> Volver al inicio
+    </a>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Eitech</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="service-detail">
+        <a href="index.html" class="back-button">
+    <i class="fas fa-arrow-left"></i> Volver al inicio
+</a>
+<div class="service-content">
+            <h1>Servicio Técnico</h1>
+            <div class="service-info">
+                <div class="service-description">
+                    <p>En Eitech ofrecemos un servicio técnico especializado para mantener su infraestructura de impresión en óptimas condiciones. Nuestro servicio incluye:</p>
+                    <ul>
+                        <li>Mantenimiento preventivo</li>
+                        <li>Mantenimiento correctivo</li>
+                        <li>Reparación de equipos</li>
+                        <li>Diagnóstico de problemas</li>
+                        <li>Reemplazo de componentes</li>
+                    </ul>
+                    <h3>Beneficios</h3>
+                    <ul>
+                        <li>Ingenieros certificados</li>
+                        <li>Respuesta rápida</li>
+                        <li>Garantía en reparaciones</li>
+                        <li>Repuestos originales</li>
+                        <li>Soporte 24/7</li>
+                    </ul>
+                </div>
+                <div class="service-image">
+                    <img src="assets/images/servicio_tecnico.jpg" alt="Servicio técnico especializado">
+                </div>
+            </div>
+            <a href="https://wa.me/573204797737?text=Hola,%20me%20gustaría%20solicitar%20el%20servicio%20técnico" class="cta-button" target="_blank">¡Solicitar Servicio!</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Eitech. Todos los derechos reservados.</p>
+    </footer>
+    <div class="chat-trigger" onclick="toggleChat()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/200px-WhatsApp.svg.png" alt="WhatsApp" style="width: 32px; height: 32px;">
+    </div>
+
+    <div id="chat-widget" class="chat-widget">
+        <div class="chat-header">
+            <h3>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/200px-WhatsApp.svg.png" alt="WhatsApp" style="width: 24px; height: 24px;">
+                Chat Eitech
+            </h3>
+            <button onclick="closeChat()">×</button>
+        </div>
+        <div id="chat-messages" class="chat-messages"></div>
+        <div class="chat-input">
+            <input type="text" id="user-message" placeholder="Escribe tu mensaje...">
+            <button onclick="sendMessage()">Enviar</button>
+        </div>
+    </div>
+    <script src="chatbot.js"></script>
+    </body>
+</html>
