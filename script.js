@@ -3,19 +3,27 @@ const menuToggle = document.querySelector('.menu-toggle');
 const navLinks = document.querySelector('.nav-links');
 
 // Asegurar que el menú esté cerrado al cargar la página
-if (menuToggle) {
+if (menuToggle && navLinks) {
     menuToggle.addEventListener('click', () => {
         menuToggle.classList.toggle('active');
         navLinks.classList.toggle('active');
+        
+        // Asegurar que el menú se muestre/oculte correctamente
+        if (navLinks.classList.contains('active')) {
+            navLinks.style.display = 'block';
+        } else {
+            navLinks.style.display = 'none';
+        }
     });
 }
 
 // Cerrar el menú cuando se hace clic en un enlace
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-        if (menuToggle) {
+        if (menuToggle && navLinks) {
             menuToggle.classList.remove('active');
             navLinks.classList.remove('active');
+            navLinks.style.display = 'none';
         }
     });
 });
@@ -23,10 +31,23 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 // Manejar eventos de redimensionamiento y scroll
 window.addEventListener('resize', () => {
     if (window.innerWidth > 768) {
-        if (menuToggle) {
+        if (menuToggle && navLinks) {
             menuToggle.classList.remove('active');
             navLinks.classList.remove('active');
+            navLinks.style.display = 'flex'; // Mostrar en escritorio
         }
+    } else {
+        // En móvil, asegurar que el menú esté oculto por defecto
+        if (!menuToggle.classList.contains('active')) {
+            navLinks.style.display = 'none';
+        }
+    }
+});
+
+// Asegurar que el menú esté cerrado al cargar la página
+window.addEventListener('load', () => {
+    if (window.innerWidth <= 768) {
+        navLinks.style.display = 'none';
     }
 });
 
