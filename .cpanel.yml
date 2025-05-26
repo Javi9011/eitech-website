@@ -1,7 +1,7 @@
 build:
   tasks:
-    - /bin/cp -R * /home/eitech/public_html/
-    - /bin/chmod -R 755 /home/eitech/public_html/
-    - /bin/chown -R eitech:eitech /home/eitech/public_html/
+    - /bin/cp -R * $DEPLOYPATH
+    - /bin/chmod -R 755 $DEPLOYPATH
+    - /bin/chown -R eitech:eitech $DEPLOYPATH
   environment:
     DEPLOYPATH: /home/eitech/public_html/
