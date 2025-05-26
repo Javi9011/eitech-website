@@ -20,6 +20,16 @@ body {
 /* Estilos responsivos */
 @media screen and (max-width: 768px) {
     /* Header y Navegación */
+    header {
+        background: white;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
     nav {
         display: flex;
         justify-content: space-between;
@@ -50,6 +60,8 @@ body {
         justify-content: center;
         min-width: 32px;
         min-height: 32px;
+        position: relative;
+        z-index: 1002;
     }
 
     .menu-toggle:hover {
@@ -87,15 +99,42 @@ body {
     .nav-links {
         display: none;
         position: fixed;
+<<<<<<< HEAD
         top: 60px;
+=======
+        top: 50px;
+>>>>>>> 5aeeec584eab7cec84a4d3c8dc7080edc7919999
         left: 0;
         width: 100%;
         background: white;
         padding: 1rem;
         box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         z-index: 1001;
+<<<<<<< HEAD
         height: calc(100vh - 60px);
         overflow-y: auto;
+=======
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .nav-content {
+        display: none;
+    }
+
+    /* Hero Section */
+    .hero {
+        margin-top: 50px;
+    }
+
+    /* Secciones */
+    section {
+        margin-top: 50px;
+>>>>>>> 5aeeec584eab7cec84a4d3c8dc7080edc7919999
     }
 
     .nav-links.active {
