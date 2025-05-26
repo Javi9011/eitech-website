@@ -6,7 +6,7 @@
 }
 
 /* Navegación principal */
-nav {
+header nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -19,48 +19,40 @@ nav {
     flex-shrink: 0;
 }
 
-.nav-links {
+.main-nav {
     display: flex;
     align-items: center;
-    gap: 2rem;
-    flex-wrap: nowrap;
 }
 
-.nav-links ul {
+.main-nav ul {
     display: flex;
     list-style: none;
     align-items: center;
     margin: 0;
     padding: 0;
-    flex-wrap: nowrap;
+    gap: 2rem;
 }
 
-.nav-links li {
+.main-nav li {
     position: relative;
-    display: flex;
-    align-items: center;
 }
 
-.nav-links a {
+.main-nav a {
     text-decoration: none;
     color: #333;
     font-weight: 500;
     padding: 0.5rem 1rem;
     transition: color 0.3s ease;
     white-space: nowrap;
-    display: flex;
-    align-items: center;
 }
 
-.nav-links a:hover {
+.main-nav a:hover {
     color: #007bff;
 }
 
-/* Contenedor del botón de soporte */
-.support-button-container {
-    display: flex;
-    align-items: center;
-    margin-left: 2rem;
+/* Item de soporte */
+.support-item {
+    margin-left: auto;
 }
 
 /* Botón de soporte */
