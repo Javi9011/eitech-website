@@ -1,45 +1,31 @@
 // Manejar el menú móvil
 const menuToggle = document.querySelector('.menu-toggle');
-const navLinks = document.querySelector('.nav-links');
+const mobileNav = document.querySelector('.mobile-nav');
 
 // Asegurar que el menú esté cerrado al cargar la página
-if (menuToggle && navLinks) {
+if (menuToggle && mobileNav) {
     menuToggle.addEventListener('click', () => {
+        mobileNav.classList.toggle('active');
         menuToggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
-        
-        // Asegurar que el menú se muestre/oculte correctamente
-        if (navLinks.classList.contains('active')) {
-            navLinks.style.display = 'block';
-        } else {
-            navLinks.style.display = 'none';
-        }
     });
 }
 
 // Cerrar el menú cuando se hace clic en un enlace
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
-        if (menuToggle && navLinks) {
+        if (menuToggle && mobileNav) {
+            mobileNav.classList.remove('active');
             menuToggle.classList.remove('active');
-            navLinks.classList.remove('active');
-            navLinks.style.display = 'none';
         }
     });
 });
 
-// Manejar eventos de redimensionamiento y scroll
+// Manejar eventos de redimensionamiento
 window.addEventListener('resize', () => {
     if (window.innerWidth > 768) {
-        if (menuToggle && navLinks) {
+        if (menuToggle && mobileNav) {
+            mobileNav.classList.remove('active');
             menuToggle.classList.remove('active');
-            navLinks.classList.remove('active');
-            navLinks.style.display = 'flex'; // Mostrar en escritorio
-        }
-    } else {
-        // En móvil, asegurar que el menú esté oculto por defecto
-        if (!menuToggle.classList.contains('active')) {
-            navLinks.style.display = 'none';
         }
     }
 });
@@ -47,7 +33,9 @@ window.addEventListener('resize', () => {
 // Asegurar que el menú esté cerrado al cargar la página
 window.addEventListener('load', () => {
     if (window.innerWidth <= 768) {
-        navLinks.style.display = 'none';
+        if (mobileNav) {
+            mobileNav.classList.remove('active');
+        }
     }
 });
 
