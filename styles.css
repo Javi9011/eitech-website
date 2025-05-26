@@ -6,11 +6,23 @@
 }
 
 /* Navegación principal */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    flex-shrink: 0;
+}
+
 .nav-links {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
-    flex: 1;
+    gap: 2rem;
 }
 
 .nav-links ul {
@@ -36,6 +48,11 @@
 
 .nav-links a:hover {
     color: #007bff;
+}
+
+/* Contenedor del botón de soporte */
+.support-button-container {
+    margin-left: auto;
 }
 
 /* Botón de soporte */
