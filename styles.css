@@ -9,13 +9,16 @@
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    justify-content: flex-end;
+    flex: 1;
 }
 
 .nav-links ul {
     display: flex;
     list-style: none;
     align-items: center;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links li {
@@ -28,10 +31,33 @@
     font-weight: 500;
     padding: 0.5rem 1rem;
     transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
     color: #007bff;
+}
+
+/* Botón de soporte */
+.support-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.support-button:hover {
+    background: #0056b3;
+}
+
+.support-button i {
+    font-size: 1.2rem;
 }
 
 html {
