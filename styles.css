@@ -23,6 +23,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 2rem;
+    flex: 1;
 }
 
 .nav-links ul {
@@ -31,10 +32,13 @@ nav {
     align-items: center;
     margin: 0;
     padding: 0;
+    flex-wrap: nowrap;
 }
 
 .nav-links li {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .nav-links a {
@@ -50,8 +54,8 @@ nav {
     color: #007bff;
 }
 
-/* Contenedor del botón de soporte */
-.support-button-container {
+/* Item de soporte */
+.support-item {
     margin-left: auto;
 }
 
@@ -67,6 +71,7 @@ nav {
     align-items: center;
     gap: 0.5rem;
     transition: background-color 0.3s ease;
+    white-space: nowrap;
 }
 
 .support-button:hover {
