@@ -1,4 +1,7 @@
-deploy:
+build:
   tasks:
-    - export DEPLOYPATH=/home/username/public_html/
-    - /bin/cp -R * $DEPLOYPATH
+    - /bin/cp -R * /home/eitech/public_html/
+    - /bin/chmod -R 755 /home/eitech/public_html/
+    - /bin/chown -R eitech:eitech /home/eitech/public_html/
+  environment:
+    DEPLOYPATH: /home/eitech/public_html/
