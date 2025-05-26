@@ -30,10 +30,32 @@ body {
         margin-bottom: 1rem;
     }
 
+    .mobile-menu {
+        display: block;
+        text-align: right;
+        margin-bottom: 1rem;
+    }
+
+    .menu-toggle {
+        background: none;
+        border: none;
+        color: #2c3e50;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
     .nav-links {
+        display: none;
         flex-direction: column;
         gap: 1rem;
         text-align: center;
+        padding: 1rem;
+        background: white;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: block;
     }
 
     .nav-links li {
@@ -42,6 +64,7 @@ body {
 
     .nav-links a {
         padding: 0.5rem;
+        display: block;
     }
 
     /* Hero Section */
@@ -66,6 +89,18 @@ body {
 
     .service-card i {
         font-size: 2rem;
+    }
+
+    /* Servicios Links */
+    .service-link {
+        display: block;
+        text-decoration: none;
+        color: #2c3e50;
+        transition: color 0.3s ease;
+    }
+
+    .service-link:hover {
+        color: #3498db;
     }
 
     /* Contacto */
@@ -93,6 +128,16 @@ body {
         width: 100%;
         max-width: 320px;
         margin: 1rem auto;
+    }
+
+    /* Secciones */
+    section {
+        padding: 3rem 1rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
     }
 }
 
