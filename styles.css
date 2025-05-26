@@ -235,6 +235,27 @@ nav {
 }
 
 /* Estilos del menú móvil */
+.menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: block;
+    cursor: pointer;
+    padding: 0.8rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-icon:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu-icon i {
+    font-size: 24px;
+    color: #2c3e50;
+}
+
 .mobile-nav {
     display: none;
     position: fixed;
@@ -249,12 +270,13 @@ nav {
     overflow-y: auto;
 }
 
-/* Mostrar menú móvil en pantallas pequeñas */
-@media screen and (max-width: 768px) {
-    .mobile-nav {
-        display: block;
-    }
+/* Mostrar menú cuando el checkbox está marcado */
+.menu-toggle:checked ~ .mobile-nav {
+    display: block;
+}
 
+/* Estilos del menú en pantallas pequeñas */
+@media screen and (max-width: 768px) {
     .nav-links {
         display: flex;
         flex-direction: column;
