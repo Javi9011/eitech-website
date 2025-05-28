@@ -5,144 +5,6 @@
     box-sizing: border-box;
 }
 
-/* Navegación principal */
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.logo {
-    flex-shrink: 0;
-}
-
-.menu-toggle {
-    display: none;
-}
-
-.nav-links {
-    position: relative;
-    z-index: 1000;
-}
-
-.nav-links ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 1.5rem;
-}
-
-.nav-links li {
-    position: relative;
-    white-space: nowrap;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s ease;
-    white-space: nowrap;
-}
-
-.nav-links a:hover {
-    color: #007bff;
-}
-
-/* Item de soporte */
-.support-item {
-    margin-left: auto;
-}
-
-/* Botón de soporte */
-.support-button {
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: background-color 0.3s ease;
-    white-space: nowrap;
-}
-
-.support-button:hover {
-    background: #0056b3;
-}
-
-.support-button i {
-    font-size: 1.2rem;
-}
-
-/* Item de soporte */
-.support-item {
-    margin-left: auto;
-}
-
-/* Botón de soporte */
-.support-button {
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: background-color 0.3s ease;
-    white-space: nowrap;
-}
-
-.support-button:hover {
-    background: #0056b3;
-}
-
-.support-button i {
-    font-size: 1.2rem;
-}
-
-.nav-links a:hover {
-    color: #007bff;
-}
-
-/* Item de soporte */
-.support-item {
-    margin-left: auto;
-}
-
-/* Botón de soporte */
-.support-button {
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: background-color 0.3s ease;
-    white-space: nowrap;
-}
-
-.support-button:hover {
-    background: #0056b3;
-}
-
-.support-button i {
-    font-size: 1.2rem;
-}
-
 html {
     scroll-behavior: smooth;
 }
@@ -153,17 +15,14 @@ body {
     color: #333;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-}
-
-<<<<<<< HEAD
-/* Estilos generales */
-body {
     padding-top: 60px;
 }
 
 /* Estilos personalizados para el menú */
 .navbar {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 0 0 15px 15px;
+    margin-bottom: 1rem;
 }
 
 .navbar-brand img {
@@ -192,6 +51,11 @@ body {
 
 .btn-primary i {
     font-size: 1.2rem;
+}
+
+/* Ajustar el padding del contenido para que no quede pegado al menú */
+main {
+    padding-top: 1rem;
 }
 
 .desktop-menu .logo {
