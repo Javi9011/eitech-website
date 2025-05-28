@@ -23,6 +23,7 @@ nav {
     float: right;
     margin: 0;
     padding: 0;
+    background-color: #f0f0f0; /* Añadido para verificar que los estilos se aplican */
 }
 
 .nav-links ul {
@@ -920,17 +921,24 @@ footer {
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    justify-content: flex-end;
+    flex: 1;
 }
 
 .nav-links ul {
     display: flex;
     list-style: none;
-    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
 }
 
 .nav-links li {
     position: relative;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
 }
 
 .nav-links a {
@@ -939,6 +947,7 @@ footer {
     font-weight: 500;
     padding: 0.5rem 1rem;
     transition: color 0.3s ease;
+    white-space: nowrap;
 }
 
 .nav-links a:hover {
