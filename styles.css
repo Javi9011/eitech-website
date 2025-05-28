@@ -155,8 +155,12 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+<<<<<<< HEAD
 /* Estilos generales */
 body {
+    padding-top: 60px;
+}
+
 /* Estilos personalizados para el menú */
 .navbar {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -194,6 +198,93 @@ body {
 .btn-primary i {
     font-size: 1.2rem;
 }
+
+/* Ajustar el contenedor del navbar para que se extienda correctamente */
+.navbar .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+}
+
+/* Asegurar que el menú se extienda correctamente */
+.navbar .container-fluid {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.desktop-menu .logo {
+    flex-shrink: 0;
+}
+
+.desktop-menu .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.desktop-menu .nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.desktop-menu .nav-links li {
+    position: relative;
+}
+
+.desktop-menu .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.desktop-menu .nav-links a:hover {
+    color: #007bff;
+}
+
+.desktop-menu .support-item {
+    margin-left: auto;
+}
+
+.desktop-menu .support-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.desktop-menu .support-button:hover {
+    background: #0056b3;
+}
+
+.desktop-menu .support-button i {
+    font-size: 1.2rem;
+}
+<<<<<<< HEAD
+=======
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .desktop-menu {
+        display: none;
+    }
+}
+    }
+>>>>>>> 503e223768ea9dd78fa8daaf3e85122545ba0f90
 
 /* Ajustar el contenedor del navbar para que se extienda correctamente */
 .navbar .container {
