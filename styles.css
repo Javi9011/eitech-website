@@ -83,6 +83,34 @@ nav {
     font-size: 1.2rem;
 }
 
+/* Item de soporte */
+.support-item {
+    margin-left: auto;
+}
+
+/* Botón de soporte */
+.support-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.support-button:hover {
+    background: #0056b3;
+}
+
+.support-button i {
+    font-size: 1.2rem;
+}
+
 .nav-links a:hover {
     color: #007bff;
 }
@@ -145,6 +173,25 @@ body {
     }
 
     nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .logo {
+        flex: 1;
+        max-width: 150px;
+    }
+
+    .logo img {
+        max-height: 35px;
+        width: auto;
+    }
+
+    .nav-links {
         display: none;
     }
 }
