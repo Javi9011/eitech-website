@@ -1,5 +1,10 @@
-build:
+deployment:
   tasks:
+    - git pull origin main
     - cp -R * $DEPLOYPATH
+    - rm -rf .git
+    - rm -f .gitignore
+    - rm -f .cpanel.yml
+    - rm -f .htaccess
   environment:
     DEPLOYPATH: /home/eitech/public_html/
