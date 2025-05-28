@@ -83,6 +83,38 @@ nav {
     font-size: 1.2rem;
 }
 
+.nav-links a:hover {
+    color: #007bff;
+}
+
+/* Item de soporte */
+.support-item {
+    margin-left: auto;
+}
+
+/* Botón de soporte */
+.support-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.support-button:hover {
+    background: #0056b3;
+}
+
+.support-button i {
+    font-size: 1.2rem;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -112,7 +144,7 @@ body {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1rem;
+        padding: 0.5rem 1rem;
         max-width: 100%;
         margin: 0 auto;
     }
@@ -128,6 +160,7 @@ body {
     }
 
     .menu-toggle {
+        display: block;
         background: none;
         border: none;
         cursor: pointer;
@@ -176,7 +209,7 @@ body {
     .nav-links {
         display: none;
         position: fixed;
-        top: 60px;
+        top: 50px;
         left: 0;
         right: 0;
         bottom: 0;
@@ -218,7 +251,7 @@ body {
 
     /* Hero Section */
     .hero {
-        margin-top: 60px;
+        margin-top: 50px;
     }
 
     .hero {
