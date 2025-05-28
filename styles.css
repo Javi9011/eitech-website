@@ -140,6 +140,10 @@ body {
         z-index: 1000;
     }
 
+    main {
+        margin-top: 60px;
+    }
+
     nav {
         display: flex;
         justify-content: space-between;
@@ -147,6 +151,7 @@ body {
         padding: 0.5rem 1rem;
         width: 100%;
         margin: 0 auto;
+        position: relative;
     }
 
     .logo {
@@ -199,6 +204,54 @@ body {
 
     .menu-toggle.active .hamburger span:nth-child(3) {
         transform: rotate(-45deg) translate(7px, -7px);
+    }
+
+    /* Estilos para el menú móvil */
+    .nav-links {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        z-index: 999;
+        display: none;
+        padding: 1rem;
+        overflow-y: auto;
+        max-height: calc(100vh - 60px);
+    }
+
+    .nav-links.active {
+        display: block;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 1rem;
+        text-align: left;
+    }
+
+    .support-item {
+        margin: 1rem 0 0;
+    }
+
+    .support-button {
+        width: 100%;
+        justify-content: flex-start;
+        padding: 0.5rem 1rem;
+    }
+}
     }
 
     .nav-links {
