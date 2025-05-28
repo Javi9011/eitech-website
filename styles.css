@@ -155,10 +155,108 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Estilos responsivos */
+/* Estilos generales para el menú de escritorio */
+.desktop-menu {
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.desktop-menu nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.desktop-menu .logo {
+    flex-shrink: 0;
+}
+
+.desktop-menu .menu-toggle {
+    display: none;
+}
+
+.desktop-menu .nav-links {
+    position: relative;
+    z-index: 1000;
+}
+
+.desktop-menu .nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.desktop-menu .nav-links li {
+    position: relative;
+    white-space: nowrap;
+}
+
+.desktop-menu .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.desktop-menu .nav-links a:hover {
+    color: #007bff;
+}
+
+.desktop-menu .support-item {
+    margin-left: auto;
+}
+
+.desktop-menu .support-button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+}
+
+.desktop-menu .support-button:hover {
+    background: #0056b3;
+}
+
+.desktop-menu .support-button i {
+    font-size: 1.2rem;
+}
+
+/* Estilos para el menú móvil */
+.mobile-menu {
+    display: none;
+}
+
 @media screen and (max-width: 768px) {
-    /* Header y Navegación */
-    header {
+    main {
+        margin-top: 60px;
+    }
+
+    .desktop-menu {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
         background: white;
         box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         position: fixed;
@@ -168,11 +266,7 @@ body {
         z-index: 1000;
     }
 
-    main {
-        margin-top: 60px;
-    }
-
-    nav {
+    .mobile-menu nav {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -181,18 +275,14 @@ body {
         margin: 0 auto;
     }
 
-    .logo {
+    .mobile-menu .logo {
         flex: 1;
         max-width: 150px;
     }
 
-    .logo img {
+    .mobile-menu .logo img {
         max-height: 35px;
         width: auto;
-    }
-
-    .nav-links {
-        display: none;
     }
 }
     }
