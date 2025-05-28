@@ -16,22 +16,21 @@
                     <img src="assets/images/EitechLogo.png" alt="Eitech" style="max-height: 40px;">
                 </a>
             </div>
-            <div class="nav-links" style="display: flex; justify-content: flex-end; flex: 1;">
-                <ul style="display: flex; list-style: none; margin: 0; padding: 0; gap: 1.5rem;">
-                    <li style="display: flex; align-items: center;">
-                        <a href="#inicio" style="text-decoration: none; color: #333; font-weight: 500; padding: 0.5rem 1rem; white-space: nowrap;">Inicio</a>
-                    </li>
-                    <li style="display: flex; align-items: center;">
-                        <a href="#servicios" style="text-decoration: none; color: #333; font-weight: 500; padding: 0.5rem 1rem; white-space: nowrap;">Servicios</a>
-                    </li>
-                    <li style="display: flex; align-items: center;">
-                        <a href="contacto.html" style="text-decoration: none; color: #333; font-weight: 500; padding: 0.5rem 1rem; white-space: nowrap;">Contacto</a>
-                    </li>
-                    <li style="display: flex; align-items: center;">
-                        <a href="acerca-de.html" target="_blank" style="text-decoration: none; color: #333; font-weight: 500; padding: 0.5rem 1rem; white-space: nowrap;">Acerca de</a>
-                    </li>
-                    <li class="support-item" style="display: flex; align-items: center;">
-                        <button class="support-button" style="display: flex; align-items: center;">
+            <div class="menu-toggle">
+                <button class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="acerca-de.html" target="_blank">Acerca de</a></li>
+                    <li class="support-item">
+                        <button class="support-button">
                             <i class="fas fa-headset"></i> Soporte
                         </button>
                     </li>
@@ -99,6 +98,7 @@
         <p>&copy; 2025 Eitech. Todos los derechos reservados.</p>
     </footer>
     <script src="chatbot.js"></script>
+    <script src="menu.js"></script>
     <div id="chat-widget" class="chat-widget">
         <div class="chat-header">
             <h3>
