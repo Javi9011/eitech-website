@@ -164,11 +164,6 @@ body {
 /* Estilos personalizados para el menú */
 .navbar {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    width: 100vw;
-    left: 0;
-    right: 0;
-    margin: 0;
-    padding: 0;
 }
 
 .navbar-brand img {
@@ -197,23 +192,6 @@ body {
 
 .btn-primary i {
     font-size: 1.2rem;
-}
-
-/* Ajustar el contenedor del navbar para que se extienda correctamente */
-.navbar .container {
-    width: 100%;
-    max-width: 100%;
-    padding-left: 0;
-    padding-right: 0;
-    margin: 0;
-}
-
-/* Asegurar que el menú se extienda correctamente */
-.navbar .container-fluid {
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
 }
 
 .desktop-menu .logo {
