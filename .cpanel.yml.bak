@@ -1,0 +1,5 @@
+build:
+  tasks:
+    - cp -R * $DEPLOYPATH
+  environment:
+    DEPLOYPATH: /home/eitech/public_html/
