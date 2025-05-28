@@ -114,32 +114,31 @@
     padding: 15px;
     display: flex;
     gap: 10px;
-    background: #f8f9fa;
-    border-radius: 0 0 20px 20px;
+    padding: 15px;
+    border-top: 1px solid #eee;
+    position: relative;
 }
 
 .chat-input input {
     flex: 1;
-    padding: 12px;
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 20px;
-    outline: none;
     font-size: 16px;
-    transition: border-color 0.3s ease;
-}
-
-.chat-input input:focus {
-    border-color: #25D366;
+    z-index: 1;
 }
 
 .chat-input button {
-    padding: 12px 20px;
     background: #25D366;
     color: white;
     border: none;
+    padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
+    font-size: 16px;
     transition: background-color 0.3s ease;
+    z-index: 2;
+    position: relative;
 }
 
 .chat-input button:hover {

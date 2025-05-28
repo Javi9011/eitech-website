@@ -98,76 +98,7 @@
     <footer>
         <p>&copy; 2025 Eitech. Todos los derechos reservados.</p>
     </footer>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="chatbot-simple.css">
-    <div id="chat-widget" class="chat-widget">
-        <div class="chat-header">
-            <h3>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/200px-WhatsApp.svg.png" alt="WhatsApp" style="width: 24px; height: 24px;">
-                Chat Eitech
-            </h3>
-            <button onclick="closeChat()">×</button>
-        </div>
-        <div class="chat-messages">
-            <div class="message bot">
-                ¡Hola! ¿Cómo podemos ayudarte hoy?
-            </div>
-        </div>
-        <div class="chat-input">
-            <input type="text" id="user-message" placeholder="Escribe tu mensaje...">
-            <button onclick="sendMessage()">Enviar</button>
-        </div>
-    </div>
-    <div class="chat-trigger" onclick="toggleChat()">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/200px-WhatsApp.svg.png" alt="WhatsApp">
-    </div>
-    <script>
-        let chatOpen = false;
-
-        function toggleChat() {
-            const chat = document.getElementById('chat-widget');
-            chat.style.display = chat.style.display === 'none' ? 'flex' : 'none';
-            chatOpen = !chatOpen;
-        }
-
-        function closeChat() {
-            document.getElementById('chat-widget').style.display = 'none';
-            chatOpen = false;
-        }
-
-        function sendMessage() {
-            const input = document.getElementById('user-message');
-            const message = input.value.trim();
-
-            if (message) {
-                const messages = document.querySelector('.chat-messages');
-                const messageDiv = document.createElement('div');
-                messageDiv.className = 'message user';
-                messageDiv.textContent = message;
-                messages.appendChild(messageDiv);
-                input.value = '';
-                
-                // Redirigir a WhatsApp
-                window.open(`https://wa.me/573204797737?text=${encodeURIComponent(message)}`, '_blank');
-            }
-        }
-
-        // Abrir chat cuando se carga la página
-        window.addEventListener('load', () => {
-            toggleChat();
-        });
-
-        // Manejar envío de mensaje al presionar Enter
-        document.getElementById('user-message').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                sendMessage();
-            }
-        });
-    </script>
-    <div class="chat-trigger" onclick="toggleChat()">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/200px-WhatsApp.svg.png" alt="WhatsApp" style="width: 32px; height: 32px;">
-    </div>
-
+    <script src="chatbot.js"></script>
     <div id="chat-widget" class="chat-widget">
         <div class="chat-header">
             <h3>
@@ -182,6 +113,8 @@
             <button onclick="sendMessage()">Enviar</button>
         </div>
     </div>
-    <script src="chatbot.js"></script>
+    <div class="chat-trigger" onclick="toggleChat()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/200px-WhatsApp.svg.png" alt="WhatsApp" style="width: 32px; height: 32px;">
+    </div>
 </body>
 </html>
