@@ -22,8 +22,7 @@ body {
 .navbar {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 0 0 15px 15px;
-    margin-bottom: 2rem;
-    padding: 1rem 0;
+    padding: 0.5rem 0;
 }
 
 .navbar-brand img {
@@ -44,7 +43,6 @@ body {
     background: #007bff;
     border: none;
     padding: 0.5rem 1.5rem;
-    gap: 0.5rem;
     border-radius: 4px;
 }
 
@@ -52,13 +50,9 @@ body {
     background: #0056b3;
 }
 
-.btn-primary i {
-    font-size: 1.2rem;
-}
-
 /* Secciones principales */
 section {
-    padding: 6rem 1rem;
+    padding: 6rem 0;
 }
 
 section h2 {
@@ -105,7 +99,7 @@ section h2 {
 
 .cta-button {
     display: inline-block;
-    padding: 1.2rem 2.5rem;
+    padding: 1rem 2rem;
     background: #007bff;
     color: white;
     text-decoration: none;
@@ -218,8 +212,12 @@ footer {
     background: #2c3e50;
     color: white;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 2rem 0;
     margin-top: 6rem;
+}
+
+footer .container {
+    padding: 0 1rem;
 }
 
 footer p {
@@ -325,6 +323,25 @@ footer p {
     background: #0056b3;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0,123,255,0.3);
+}
+
+/* Ajustes para computadora */
+@media (min-width: 992px) {
+    .hero {
+        padding-top: 120px;
+    }
+    
+    .services-grid {
+        gap: 3rem;
+    }
+    
+    .contact-info {
+        gap: 3rem;
+    }
+    
+    .contact-item {
+        padding: 2.5rem;
+    }
 }
 
 /* Secciones principales */
