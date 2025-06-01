@@ -15,14 +15,14 @@ body {
     color: #333;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    padding-top: 60px;
+    padding-top: 80px;
 }
 
 /* Header y Navegación */
 .navbar {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 0 0 15px 15px;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     padding: 1rem 0;
 }
 
@@ -58,28 +58,31 @@ body {
 
 /* Secciones principales */
 section {
-    padding: 4rem 1rem;
+    padding: 6rem 1rem;
 }
 
 section h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
     text-align: center;
     color: #2c3e50;
+    font-weight: 600;
 }
 
 /* Hero Section */
 .hero {
     height: 100vh;
-    min-height: 500px;
+    min-height: 600px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../assets/images/hero-bg.jpg');
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('../assets/images/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     color: white;
+    margin-top: -80px;
+    padding-top: 80px;
 }
 
 .hero-content {
@@ -88,66 +91,88 @@ section h2 {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     margin-bottom: 1.5rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    line-height: 1.2;
 }
 
 .hero p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
+    font-weight: 400;
 }
 
 .cta-button {
     display: inline-block;
-    padding: 1rem 2rem;
+    padding: 1.2rem 2.5rem;
     background: #007bff;
     color: white;
     text-decoration: none;
     border-radius: 4px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
 .cta-button:hover {
     background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,123,255,0.3);
 }
 
 /* Servicios */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .service-card {
     background: white;
-    border-radius: 10px;
-    padding: 2rem;
+    border-radius: 15px;
+    padding: 2.5rem;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
 }
 
 .service-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 .service-card i {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #007bff;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.service-card:hover i {
+    color: #0056b3;
 }
 
 .service-card h3 {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.service-card p {
+    color: #6c757d;
+    line-height: 1.6;
 }
 
 .service-link {
     text-decoration: none;
     color: inherit;
     display: block;
+    transition: color 0.3s ease;
 }
 
 .service-link:hover {
@@ -158,18 +183,34 @@ section h2 {
 .contact-info {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    padding: 2rem;
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .contact-item {
     text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 .contact-item i {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: #007bff;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.contact-item:hover i {
+    color: #0056b3;
+}
+
+.contact-item p {
+    color: #6c757d;
+    line-height: 1.6;
 }
 
 /* Footer */
@@ -177,8 +218,13 @@ footer {
     background: #2c3e50;
     color: white;
     text-align: center;
-    padding: 1rem;
-    margin-top: 4rem;
+    padding: 2rem 1rem;
+    margin-top: 6rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
 }
 
 /* Chat Widget */
@@ -188,19 +234,97 @@ footer {
     right: 2rem;
     z-index: 1000;
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    width: 350px;
+    max-width: 90%;
+    display: none;
+}
+
+.chat-widget.active {
+    display: block;
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem;
-    max-width: 320px;
-    width: 100%;
+    background: #007bff;
+    color: white;
+    border-radius: 15px 15px 0 0;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.chat-header img {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+}
+
+.chat-header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.chat-messages {
+    height: 300px;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.chat-input {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.chat-input button {
+    padding: 0.75rem 1.5rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.chat-input button:hover {
+    background: #0056b3;
 }
 
 /* Botón de soporte */
 .support-button {
-    width: 100%;
-    max-width: 200px;
-    margin: 0 auto;
     display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.support-button:hover {
+    background: #0056b3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,123,255,0.3);
 }
 
 /* Secciones principales */
